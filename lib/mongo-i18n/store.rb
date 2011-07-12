@@ -27,15 +27,11 @@ module MongoI18n
       end
       keys
     end
-    
+
     # Thankfully borrowed from Jodosha's redis-store
     # https://github.com/jodosha/redis-store/blob/master/lib/i18n/backend/redis.rb
     def available_locales
-      locales = self.keys.map { |k| k =~ /\./; $` }
-      locales.uniq!
-      locales.compact!
-      locales.map! { |k| k.to_sym }
-      locales
+      self.keys.map { |k| k =~ /\./; $` }.compact.uniq.map(&:to_sym)
     end
   end
 end
