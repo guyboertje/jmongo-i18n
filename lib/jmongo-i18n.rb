@@ -2,7 +2,5 @@
 
 require RUBY_PLATFORM =~ /java/ ? 'jmongo' : 'mongo'
 
-require 'mongo-i18n/store'
-
-module MongoI18n
-end
+require 'core_ext/hash'
+require 'jmongo-i18n/mongo_store'

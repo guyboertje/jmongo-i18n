@@ -1,6 +1,7 @@
 $:.unshift(File.expand_path('../../lib', __FILE__))
 
-require 'mongo-i18n'
+require 'i18n'
+require 'jmongo-i18n'
 require 'rspec'
 
 connection = Mongo::Connection.new
