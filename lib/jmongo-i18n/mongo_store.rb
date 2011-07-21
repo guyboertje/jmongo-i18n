@@ -30,7 +30,7 @@ module I18n
         end
 
         def available_locales
-          @store.find({}, :fields => ["_id"]).map{ |k| k =~ /\./; $` }.compact.uniq.map(&:to_sym)
+          @store.find({}, :fields => ["_id"]).map{ |k| k['_id'] =~ /\./; $` }.compact.uniq.map(&:to_sym)
         end
 
         def fetch locale, key

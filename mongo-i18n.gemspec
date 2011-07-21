@@ -14,7 +14,8 @@ Gem::Specification.new do |s|
   s.description  = 'MongoDB backend implementation for I18n gem.'
 
   s.add_dependency              'i18n'
-  s.add_dependency              'mongo'
+  s.add_dependency              'bson_ext'
+  s.add_dependency              'mongo' 
   s.add_dependency              'jmongo'
   s.add_dependency              'hashery'
   s.add_development_dependency  'rspec',          '~> 2.3.0'
