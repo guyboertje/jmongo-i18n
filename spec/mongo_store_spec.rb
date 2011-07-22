@@ -31,9 +31,6 @@ describe "MongoStore" do
 
     it {should == "bar"}
 
-    subject {store.lookup(:en,:foo)}
-    it {should == "bar"}
-
   end
 
   describe "complex write" do
@@ -104,7 +101,7 @@ describe "i18n integration" do
     end
 
   end
-  
+
 end
 
 

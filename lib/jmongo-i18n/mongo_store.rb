@@ -37,7 +37,7 @@ module I18n
           lookup(locale, key)
         end
 
-      #protected
+      protected
 
         def lookup(locale, key, scope = [], options = {})
           doc = get_value("#{locale}.#{key}")
@@ -46,7 +46,7 @@ module I18n
           end
         end
 
-      #private
+      private
 
         def get_value(id)
           @store.find_one('_id'=>id)
